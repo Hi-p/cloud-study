@@ -16,7 +16,7 @@
 
 <br>
 
-![Progress](https://img.shields.io/badge/Study_Progress-75%25-brightgreen?style=flat-square)
+![Study Records](https://img.shields.io/badge/Study_Records-4%2F4-22c55e?style=flat-square)
 ![Architecture](https://img.shields.io/badge/Architecture-arm64-orange?style=flat-square)
 ![Docker Hub](https://img.shields.io/badge/Docker_Hub-hello--go:v2-2496ED?style=flat-square&logo=docker&logoColor=white)
 
@@ -32,6 +32,7 @@
 - [Week 1 - VM vs Container](#-week-1---vm-vs-container)
 - [Week 2 - Dockerizing](#-week-2---dockerizing)
 - [Week 3 - Image Optimization & Registry](#-week-3---image-optimization--registry)
+- [Week 5 - Kubernetes Basics](#-week-5---kubernetes-basics)
 - [Key Results](#-key-results)
 - [Docker Hub](#-docker-hub)
 - [Next Step](#-next-step)
@@ -40,23 +41,17 @@
 
 ## 📈 Study Progress
 
-**현재 진행률: 3 / 4 단계 완료**
-
-```text
-Week 1  ████████████████████  100%  ✅
-Week 2  ████████████████████  100%  ✅
-Week 3  ████████████████████  100%  ✅
-Week 4  ░░░░░░░░░░░░░░░░░░░░    0%  ⏳
-
-Overall ███████████████░░░░░   75%
-```
+**실제 진행한 4개 회차 모두 GitHub 기록 완료 (4/4 · 100%)**
 
 | Week | Topic | Status |
 |:---:|---|:---:|
-| 01 | VM vs Container | ✅ Complete |
-| 02 | Dockerizing | ✅ Complete |
-| 03 | Image Optimization & Registry | ✅ Complete |
-| 04 | Kubernetes | ⏳ Next |
+| 01 | VM vs Container | ✅ Completed |
+| 02 | Dockerizing | ✅ Completed |
+| 03 | Image Optimization & Registry | ✅ Completed |
+| 04 | 시험 기간 휴강 | ⏸️ No Session |
+| 05 | Kubernetes Basics | ✅ Completed |
+
+> 진행률 100%는 전체 교육과정의 완료율이 아니라 지금까지 실제 진행한 회차의 GitHub 기록률입니다.
 
 ---
 
@@ -94,6 +89,9 @@ cloud-study/
 │   ├── Dockerfile.multiarch
 │   ├── go.mod
 │   ├── main.go
+│   └── README.md
+│
+├── week05-kubernetes-basics/
 │   └── README.md
 │
 ├── .gitignore
@@ -337,6 +335,49 @@ linux/arm64
 
 ---
 
+## ☸️ Week 5 - Kubernetes Basics
+
+> Docker Desktop에서 Kubernetes 기초 실습을 진행했습니다.
+
+📂 [Week 5 실습 기록](./week05-kubernetes-basics)
+
+### 실습 내용
+
+- Kubernetes 클러스터 실행 및 상태 확인
+- nginx Pod 생성과 삭제
+- Deployment를 통한 Pod 자동 복구
+- Replica 2개에서 3개로 Scaling
+- Service 생성 및 Port Forwarding
+- nginx 1.27 → 1.28 Rolling Update
+- Rollback
+- 실습 리소스 정리
+
+### 핵심 실습 흐름
+
+```text
+Docker Desktop
+      ↓
+Kubernetes Cluster
+      ↓
+Pod 생성 / 삭제
+      ↓
+Deployment (replicas=2)
+      ↓
+Pod 자동 복구
+      ↓
+Scale to 3 Pods
+      ↓
+Service / Port Forward
+      ↓
+Rolling Update / Rollback
+      ↓
+Cleanup
+```
+
+✅ **Week 5 Completed**
+
+---
+
 ## 🏆 Key Results
 
 ### Docker Layer Cache
@@ -413,43 +454,14 @@ Docker가 실행 환경의 CPU Architecture에 맞는 이미지를 자동으로 
 
 ## ☸️ Next Step
 
-### Week 4 - Kubernetes
+다음 회차에서는 Kubernetes의 선언형 설정과 배포를 더 깊이 학습할 예정입니다.
 
-다음 단계에서는 지금까지 만든:
+- Kubernetes YAML Manifest
+- Deployment / Service 설정
+- ConfigMap / Secret
+- 컨테이너 이미지 배포
 
-```text
-kwakjoonoh/hello-go:v2
-```
-
-이미지를 Kubernetes 환경에서 사용할 예정입니다.
-
-예정 학습 내용:
-
-- Kubernetes 기본 구조
-- Control Plane / Worker Node
-- Pod
-- Deployment
-- Replica
-- Service
-- `kubectl`
-- Docker Hub Image 배포
-- 여러 Pod로 애플리케이션 실행
-
-```text
-Docker
-   ↓
-Container Image
-   ↓
-Docker Hub
-   ↓
-Kubernetes
-   ↓
-Pod
-   ↓
-Deployment
-   ↓
-Service
-```
+> 4회차는 시험 기간으로 스터디를 진행하지 않았습니다.
 
 ---
 
